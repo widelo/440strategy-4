@@ -5,7 +5,7 @@ ROWS, COLS = 4, 4
 START = (0, 0)
 WALLS = {(1, 1)}                          # 'X': blocked, bumping keeps you in place
 TERMINALS = {(3, 1): -1.0, (3, 3): 10.0}  # terminal cells and their rewards
-STEP_REWARD = 0.0                         # reward for ordinary moves ('.' cells)
+STEP_REWARD = -0.04                         # reward for ordinary moves ('.' cells)
 
 ACTIONS = {"U": (-1, 0), "D": (1, 0), "L": (0, -1), "R": (0, 1)}
 ACTION_NAMES = list(ACTIONS)
