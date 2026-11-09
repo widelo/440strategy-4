@@ -29,6 +29,32 @@ Each subagent works with its **own conversation context** and returns a concise 
 
 Context isolation does not mean filesystem or security isolation. The agents may still read the same repository files.
 
+## MCP Setup
+
+The MCP server runs locally, so each person who wants to use the MCP feature needs Python 3.11 or newer and the MCP package installed on their computer.
+
+Check your Python version:
+
+```powershell
+python --version
+```
+
+If the version is Python 3.11 or newer, install the MCP package:
+
+```powershell
+python -m pip install "mcp[cli]"
+```
+
+To verify that MCP is installed:
+
+```powershell
+python -c "import mcp; print('MCP installed')"
+```
+
+If it prints `MCP installed`, the local MCP environment is ready.
+
+If `python` is not recognized on Windows, use `py` instead of `python`.
+
 ## Run in VS Code (Windows PowerShell)
 
 1. Open this repository in VS Code, then open **Terminal → New Terminal**.
