@@ -29,31 +29,31 @@ Each subagent works with its **own conversation context** and returns a concise 
 
 Context isolation does not mean filesystem or security isolation. The agents may still read the same repository files.
 
-Run in VS Code (Windows PowerShell)
+## Run in VS Code (Windows PowerShell)
 
-Open this repository in VS Code, then open Terminal → New Terminal.
+1. Open this repository in VS Code, then open **Terminal → New Terminal**.
+2. Confirm the terminal is in the repository folder: `pwd`.
+3. Verify that `.codex/config.toml`, the two agent files, and the `context/` files are present.
 
-Confirm the terminal is in the repository folder: pwd.
-
-Verify that .codex/config.toml, the two agent files, and the context/ files are present.
-
-Run the Q-learning solution
+### Run the Q-learning solution
 
 From the root of the repository, run:
 
+```bash
 python .agents/skills/vacuum-qlearning/q_learning_grid.py
+```
 
-If python does not work on Windows, use:
+If `python` does not work on Windows, use:
 
+```bash
 py .agents/skills/vacuum-qlearning/q_learning_grid.py
+```
 
 The program trains the vacuum robot using Q-learning and prints the learned policy, state values, and greedy path from the starting state.
 
-Start Codex from the repository folder: codex.
-
-Ask the main agent to delegate the read-only demo question below to the two specialized agents.
-
-Observe the separate subagent tasks and the main agent's combined answer.
+4. Start Codex from the repository folder: `codex`.
+5. Ask the main agent to delegate the read-only demo question below to the two specialized agents.
+6. Observe the separate subagent tasks and the main agent's combined answer.
 
 **Demo prompt:**
 
