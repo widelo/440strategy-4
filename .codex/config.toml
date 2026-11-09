@@ -1,3 +1,7 @@
 [mcp_servers.repo-context]
 command = "python"
 args = ["mcp_server.py"]
+
+[agents]
+enabled = true
+max_concurrent_threads_per_session = 2

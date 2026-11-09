@@ -1,0 +1,9 @@
+Use Strategy 4: Isolate with the custom project subagents already defined in .codex/agents/.
+
+1. Spawn grid_reader to read ONLY context/environment.md and report the known 4x4 grid facts.
+2. Independently spawn rules_auditor to read ONLY context/open-questions.md and report the unspecified T, R, action, and terminal rules.
+3. Run the two subagents in parallel if available, and wait for both reports.
+4. Combine the reports under these headings: Known grid, Still unknown, Delegation evidence.
+5. Under Delegation evidence, name each actual spawned agent and the file it consulted.
+
+Do not make up rules, edit files, or implement or run Q-learning for this demonstration. If subagent tools are unavailable, report that limitation honestly rather than pretending the agents ran.
