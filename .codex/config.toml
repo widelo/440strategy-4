@@ -1,0 +1,4 @@
+[mcp_servers.repo-context]
+command = "/s/chopin/g/under/salvas/CS440/.venv/bin/python3"
+args = ["/s/chopin/g/under/salvas/CS440/mcp_server.py"]
+cwd = "/s/chopin/g/under/salvas/CS440"
